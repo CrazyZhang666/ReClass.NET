@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -25,7 +25,7 @@
     <Optimize>false</Optimize>
     <OutputPath>$(SolutionDir)bin\Debug\x86\</OutputPath>
     <IntermediateOutputPath>$(SolutionDir)obj\$(Configuration)\x86\$(MSBuildProjectName)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DEBUG;RECLASSNET32</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
@@ -79,7 +79,7 @@
     <Optimize>true</Optimize>
     <OutputPath>$(SolutionDir)bin\Release\x86\</OutputPath>
     <IntermediateOutputPath>$(SolutionDir)obj\$(Configuration)\x86\$(MSBuildProjectName)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;RECLASSNET32;RELEASE</DefineConstants>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -173,6 +173,8 @@
     <Compile Include="Debugger\RemoteDebugger.Thread.cs" />
     <Compile Include="Debugger\SoftwareBreakpoint.cs" />
     <Compile Include="Extensions\ByteExtension.cs" />
+    <Compile Include="Extensions\IRemoteMemoryReaderExtension.cs" />
+    <Compile Include="Extensions\IRemoteMemoryWriterExtension.cs" />
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Extensions\PointExtension.cs" />
     <Compile Include="Extensions\StringBuilderExtensions.cs" />
@@ -394,6 +396,9 @@
     <Compile Include="Util\BitString.cs" />
     <Compile Include="Util\CircularBuffer.cs" />
     <Compile Include="Util\CommandLineArgs.cs" />
+    <Compile Include="Util\Conversion\BigEndianBitConverter.cs" />
+    <Compile Include="Util\Conversion\EndianBitConverter.cs" />
+    <Compile Include="Util\Conversion\LittleEndianBitConverter.cs" />
     <Compile Include="Util\CustomDataMap.cs" />
     <Compile Include="Extensions\BinaryReaderWriterExtensions.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
